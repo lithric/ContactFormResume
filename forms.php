@@ -16,10 +16,16 @@
         <?php
             $_POST["trans"] = explode(",",$_POST["trans"]);
             if (is_string($_POST["trans"])) {
-                $info = array("Elion Oliver","Ohio","Youngstown","184 Homestead Dr.","+1 (330)-318-0068","elion.K.oliver@gmail.com");
+                $info = array("Elion",
+                                "Ohio",
+                                "Youngstown",
+                                "184 Homestead Dr.",
+                                "+1 (330)-318-0068",
+                                "elion.K.oliver@gmail.com",
+                                "Oliver");
             }
             else {
-                $info = array($_POST["trans"]);
+                $info = $_POST["trans"];
             }
             if (is_string($_POST["trans"])) {
                 $_POST["trans"]=$info;
@@ -35,6 +41,15 @@
                                 echo "value="."\"".$info[0]."\"";
                             ?>
                             name="firstname"><br>
+            Last Name: <input type="text" 
+                            <?php
+                                error_reporting(0);
+                                if ($_POST["trans"][6] !== $null) {
+                                    $info[6]=$_POST["trans"][6];
+                                }
+                                echo "value="."\"".$info[6]."\"";
+                            ?>
+                            name="lastname"><br>
             State: <input type="text"
                             <?php
                                 error_reporting(0);
@@ -94,7 +109,7 @@
                     }
                     echo "value="."\"".implode($info, ",")."\"";
                 ?> hidden>
-                <button>Resume<br><p style="visibility: hidden;">a</p></button>
+                <button type="submit">Resume<br><p style="visibility: hidden;">a</p></button>
             </form>
         </a>
         <script src="" async defer></script>

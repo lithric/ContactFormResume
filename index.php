@@ -23,16 +23,18 @@
                             $_POST["city"],
                             $_POST["address"],
                             $_POST["phone"],
-                            $_POST["email"],);
+                            $_POST["email"],
+                            $_POST["lastname"]);
             $_POST["trans"] = $info;
         }
         else if (is_string($_POST["trans"])) {
-            $info = array("Elion Oliver",
+            $info = array("Elion",
                         "Ohio",
                         "Youngstown",
                         "184 Homestead Dr.",
                         "+1 (330)-318-0068",
-                        "elion.K.oliver@gmail.com");
+                        "elion.K.oliver@gmail.com",
+                        "Oliver");
             $_POST["trans"]=$info;
         }
         else {
@@ -144,6 +146,16 @@
                     $info[0] = $_POST["firstname"];
                 }
                 echo $info[0];
+                echo " ";
+                if ($_POST["lastname"] == $null) {
+                    if ($_POST["trans"][6] !== $null) {
+                        $info[6] = $_POST["trans"][6];
+                    }
+                }
+                else {
+                    $info[6] = $_POST["lastname"];
+                }
+                echo $info[6];
             ?>
         </h1>
         <h2 style="height: 2em">Software Engineer</h2>
