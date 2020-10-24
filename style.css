@@ -1,0 +1,239 @@
+* {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+display:grid;
+height:100vh;
+grid-template-rows: auto;
+justify-items: center;
+align-items: center;
+background-color: gray;
+}
+
+.container {
+display: grid;
+width:85%;
+height:99.5%;
+grid-template-columns: repeat(16, 1fr);
+grid-auto-rows: minmax(10px, auto);
+grid-template-areas:
+"por por por por por por edu edu edu edu edu edu edu edu edu edu"
+"por por por por por por edu edu edu edu edu edu edu edu edu edu"
+"por por por por por por edu edu edu edu edu edu edu edu edu edu"
+"por por por por por por edu edu edu edu edu edu edu edu edu edu"
+"nam nam nam nam nam nam exp exp exp exp exp exp exp exp exp exp"
+"per per per per per per exp exp exp exp exp exp exp exp exp exp"
+"per per per per per per exp exp exp exp exp exp exp exp exp exp"
+"per per per per per per exp exp exp exp exp exp exp exp exp exp"
+"per per per per per per exp exp exp exp exp exp exp exp exp exp"
+"per per per per per per exp exp exp exp exp exp exp exp exp exp";
+}
+
+.portrait {
+grid-area: por;
+}
+img.portrait {
+justify-self: center;
+align-self: center;
+display: block;
+object-fit: cover;
+width: 64%;
+height: 73%;
+margin-bottom: 20px;
+margin-left: 5px;
+border-radius: 100%;
+}
+.name {
+grid-area: nam;
+}
+div.name h1 {
+display:grid;
+grid-template-rows: 2;
+color:white;
+margin-left: 42px;
+letter-spacing: 6px;
+font-size: 29px;
+line-height: 1.15em;
+margin-top: -6px;
+text-transform: uppercase;
+}
+div.name h2 {
+color:white;
+font-weight: 300;
+margin-left: 42px;
+letter-spacing: 3px;
+font-size: 13px;
+line-height: 1.15em;
+margin-top: 5px;
+}
+.personalinfo {
+display:grid;
+margin-left: 42px;
+grid-area: per;
+margin-bottom: 60px;
+}
+div.personalinfo h1 {
+color: #FFFFFF;
+font-size: 13px;
+font-weight: 300;
+letter-spacing: 4px;
+margin-bottom: 8px;
+margin-top: -20px;
+}
+div.personalinfo h3 {
+    margin-left: 2px;
+    width: 80px;
+    border: 2px solid white ;
+}
+div.personalinfo p {
+font-size: 11px;
+letter-spacing: 1.5px;
+line-height: 1.5em;
+font-weight: 250;
+margin-top: 8px;
+margin-right: 12px;
+color: #FFFFFF;
+}
+.education {
+display:grid;
+padding-left: 45px;
+background-color: #CBCCCB;
+grid-area: edu;
+padding-bottom: 9px;
+}
+div.education h1 {
+color: #000000;
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 3px;
+margin-bottom: -45px;
+margin-top: 41px;
+}
+div.education h3 {
+margin-left: 2px;
+height: 0px;
+width: 85px;
+margin-top: 25px;
+border: 2px solid black ;
+}
+div.education h2 {
+font-size: 11px;
+letter-spacing: 1.5px;
+line-height: 1.5em;
+font-weight: 400;
+margin-top: -13px;
+color: #000000;
+}
+div.education p {
+font-size: 10px;
+letter-spacing: 1px;
+line-height: 1.65em;
+font-weight: 400;
+margin-top: -35px;
+margin-right: 70px;
+color: #000000;
+}
+.experience {
+display:grid;
+padding-left: 45px;;
+background-color: #FFFFFF;
+grid-area: exp;
+padding-bottom: 60px;
+}
+div.experience h1 {
+color: #000000;
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 3px;
+margin-bottom: -45px;
+margin-top: 34px;
+}
+div.experience h3 {
+margin-left: 2px;
+height: 0px;
+width: 85px;
+margin-top: 12px;
+border: 2px solid black ;
+}
+div.experience h2 {
+font-size: 11px;
+letter-spacing: 1.5px;
+line-height: 1.5em;
+font-weight: 400;
+margin-top: -20px;
+color: #000000;
+}
+div.experience p {
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1.65em;
+    font-weight: 400;
+    margin-top: -25px;
+    margin-right: 113px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.experiencetitle {
+grid-area: ext;
+}
+.educationtitle {
+grid-area: edt;
+}
+
+.container {
+background-color: #192624;
+}
+.container h1:nth-child(2) {
+background-color: #CBCCCB;
+}
+.container h1:nth-child(3) {
+background-color: #192624;
+}
+.container h1:nth-child(4) {
+background-color: #192624;
+}
+.container h1:nth-child(5) {
+background-color: #FFFFFF;
+}
+.container h1:nth-child(6) {
+background-color: #FFFFFF;
+}
+.container h1:nth-child(7) {
+background-color: #CBCCCB;
+}
+
+a {
+position: absolute;
+color: skyblue;
+}
+
+.contact {
+    font-size:10px;
+}
+
+span {
+font-weight: 600;
+}
+
+button {
+    -webkit-appearance: none;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    background-color: rgb(206, 206, 206);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+
+button:hover {
+    cursor:pointer;
+    filter: brightness(1.2);
+}
+
+button:active {
+    filter: brightness(0.8);
+}
